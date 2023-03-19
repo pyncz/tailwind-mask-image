@@ -1,0 +1,40 @@
+{
+  "name": "@pyncz/tailwind-mask-image",
+  "description": "A `mask-image` plugin for Tailwind CSS",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "author": "Pau Yankovski <https://github.com/pyncz>",
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "css-utils",
+    "plugin",
+    "mask-image"
+  ],
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "./index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.2.0",
+    "@antfu/ni": "^0.17.2",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyncz/tailwind-mask-image.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}
