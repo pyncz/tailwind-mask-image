@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pyncz/tailwind-mask-image.git"
+    "url": "https://github.com/pyncz/tailwind-mask-image"
   },
   "publishConfig": {
     "access": "public"
