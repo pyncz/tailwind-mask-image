@@ -68,7 +68,7 @@ The `opacity` values are taken from your theme specified in the `tailwind.config
 <div class="mask-linear mask-from-0 mask-via-20" />
 <div class="mask-linear mask-from-0 mask-via-100 mask-to-50" />
 ```
-![mask-dir example](examples/mask-linear-stops.png)
+![mask-linear stops' example](examples/mask-linear-stops.png)
 
 > **Note**
 > You don't have to specify **all** the stops, because the default values (100% for the start and 0% for the end point) still work.
@@ -81,7 +81,7 @@ Applies a `radial-gradient` as the mask image. Like for the `mask-linear` util, 
 ```html
 <div class="mask-radial" />
 ```
-![mask-dir example](examples/mask-radial.png)
+![mask-radial example](examples/mask-radial.png)
 
 #### Shape `mask-shape`
 
@@ -91,7 +91,7 @@ Applies a `radial-gradient` as the mask image. Like for the `mask-linear` util, 
 <div class="mask-radial mask-shape-ellipse" />
 <div class="mask-radial mask-shape-circle" />
 ```
-![mask-dir example](examples/mask-shape.png)
+![mask-shape example](examples/mask-shape.png)
 
 #### Position `mask-at`
 
@@ -100,7 +100,7 @@ By default, the gradient's position is `center`. You can use the same values as 
 ```html
 <div class="mask-radial mask-at-[30px_40px]" />
 ```
-![mask-dir example](examples/mask-position.png)
+![mask-at example](examples/mask-position.png)
 
 #### Size `mask-size`
 
@@ -112,7 +112,7 @@ With this util you can specify the size of the gradient.
 <div class="mask-radial mask-size-farthest-side" />
 <div class="mask-radial mask-size-farthest-corner" />
 ```
-![mask-dir example](examples/mask-size.png)
+![mask-size example](examples/mask-size.png)
 
 Besides *as-they-are* keyword-values, there are also a couple of aliases:
 - `mask-size-contain` for `closest-side`
@@ -124,7 +124,7 @@ You can also use arbitary values:
 <div class="mask-size-[40%_2rem] mask-radial" />
 <div class="mask-size-[40%_150%] mask-radial" />
 ```
-![mask-dir example](examples/mask-size-arbitary.png)
+![example for mask-size with arbitary values](examples/mask-size-arbitary.png)
 
 #### Stops
 
@@ -135,7 +135,7 @@ You can also use arbitary values:
 <div class="mask-radial mask-from-0 mask-via-[0.25]" />
 <div class="mask-radial mask-from-0 mask-via-[0.75] mask-to-100" />
 ```
-![mask-dir example](examples/mask-radial-stops.png)
+![mask-radial stops' example](examples/mask-radial-stops.png)
 
 
 ### `none`
@@ -145,7 +145,7 @@ This value matches `mask-image` css prop's default value so it makes no sense to
 ```html
 <div class="mask-linear sm:mask-none" />
 ```
-![mask-dir example](examples/mask-none.png)
+![mask-none example](examples/mask-none.png)
 
 
 ### Arbitary values
@@ -157,14 +157,14 @@ The `mask-image` css prop accepts not only gradients but images as well. You can
 ```html
 <div class="mask-[url('/your-pretty-image.png')]" />
 ```
-![mask-dir example](examples/arbitary-image.png)
+![arbitary mask image example](examples/arbitary-image.png)
 
 In this case you can manage the [`mask-repeat` css property](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat) as well with the `mask-repeat` and `mask-no-repeat` utils.
 
 ```html
 <div class="mask-[url('/your-pretty-image.png')] mask-repeat sm:mask-no-repeat" />
 ```
-![mask-dir example](examples/mask-repeat.png)
+![mask-repeat example](examples/mask-repeat.png)
 
 #### Gradients
 
@@ -173,7 +173,7 @@ You can pass other types of the gradients, e.g. `conic-gradient` etc.
 ```html
 <div class="mask-[conic-gradient(from_45deg,_black,_transparent)]" />
 ```
-![](examples/arbitary-conic-gradient.png)
+![arbitary conic-gradient mask example](examples/arbitary-conic-gradient.png)
 
 Also, you may want not to use the API above even for `linear-gradient` or `radial-gradient` so you can pass them arbitrarily too.
 
