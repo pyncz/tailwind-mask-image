@@ -2,7 +2,7 @@
 
 A `mask-image` plugin for [Tailwind CSS](https://tailwindcss.com).
 
-[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/POFXj5AoZu)
+[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/5nqePqTxTt)
 
 ---
 
