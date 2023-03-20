@@ -3,7 +3,6 @@
   "description": "A `mask-image` plugin for Tailwind CSS",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
   "author": "Pau Yankovski <https://github.com/pyncz>",
   "keywords": [
     "tailwindcss",
