@@ -1,0 +1,112 @@
+<div class="min-h-screen justify-center space-y-4 bg-zinc-900 p-6 text-zinc-100 sm:py-12">
+  <h1>Linear</h1>
+  <div class="flex">
+    <div class="example-container">
+      <div class="example mask-linear"></div>
+    </div>
+  </div>
+
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-linear mask-dir-to-t"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-linear mask-dir-to-tl"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-linear mask-dir-[10deg]"></div>
+    </div>
+  </div>
+
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-linear mask-from-50 mask-to-[0.1]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-linear mask-from-0 mask-via-20"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-linear mask-from-0 mask-via-100 mask-to-50"></div>
+    </div>
+  </div>
+
+  <h1>Radial</h1>
+  <div class="flex">
+    <div class="example-container">
+      <div class="example mask-radial"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example min-h-[4rem] mask-radial mask-shape-ellipse"></div>
+    </div>
+    <div class="example-container">
+      <div class="example min-h-[4rem] mask-radial mask-shape-circle"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-radial mask-at-[30px_40px]"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example min-w-[6rem] mask-radial mask-size-closest-side mask-at-[40px_40px]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example min-w-[6rem] mask-radial mask-size-closest-corner mask-at-[40px_40px]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example min-w-[6rem] mask-radial mask-size-farthest-side mask-at-[40px_40px]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example min-w-[6rem] mask-radial mask-size-farthest-corner mask-at-[40px_40px]"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-radial mask-size-[40%_2rem]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-radial mask-size-[40%_150%]"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-radial mask-from-0 mask-via-[0.25]"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-radial mask-from-0 mask-via-[0.75] mask-to-100"></div>
+    </div>
+  </div>
+
+  <h1>None</h1>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-linear"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-none"></div>
+    </div>
+  </div>
+
+  <h1>Arbitary</h1>
+  <div class="flex">
+    <div class="example-container">
+      <div class="example mask-[url('https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg')]"></div>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <div class="example-container">
+      <div class="example mask-[url('https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg')] mask-repeat"></div>
+    </div>
+    <div class="example-container">
+      <div class="example mask-[url('https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg')] mask-no-repeat"></div>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="example-container">
+      <div class="example mask-[conic-gradient(from_45deg,_black,_transparent)]"></div>
+    </div>
+  </div>
+</div>
