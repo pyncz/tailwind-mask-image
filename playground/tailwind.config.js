@@ -51,7 +51,7 @@ module.exports = {
       })
 
       // - direction
-      // NOTE: Can accept angle as an arbitary value, e.g. `mask-dir-[30deg]`
+      // NOTE: Can accept angle as an arbitrary value, e.g. `mask-dir-[30deg]`
       matchUtilities(
         {
           'mask-dir': (value) => ({
@@ -83,7 +83,7 @@ module.exports = {
       })
 
       // - size
-      // NOTE: Can accept X Y size as an arbitary value, e.g. `mask-size-[25%_25%]`
+      // NOTE: Can accept X Y size as an arbitrary value, e.g. `mask-size-[25%_25%]`
       matchUtilities(
         {
           'mask-size': (value) => ({
@@ -105,7 +105,7 @@ module.exports = {
       )
 
       // - position
-      // NOTE: Can accept X Y position as an arbitary value, e.g. `mask-at-[50%_10px]`
+      // NOTE: Can accept X Y position as an arbitrary value, e.g. `mask-at-[50%_10px]`
       matchUtilities(
         {
           'mask-at': (value) => ({
@@ -128,7 +128,7 @@ module.exports = {
       )
 
       // - stops
-      // NOTE: Can accept custom opacity as an arbitary value, e.g. `mask-dir-[0.25]`
+      // NOTE: Can accept custom opacity as an arbitrary value, e.g. `mask-dir-[0.25]`
       matchUtilities(
         {
           'mask-from': (value) => ({

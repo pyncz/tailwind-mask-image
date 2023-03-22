@@ -46,7 +46,7 @@ Applies a `linear-gradient` as the mask image. Opacity is set from 100% at the s
 
 #### Direction `mask-dir`
 
-By default, the gradient is [directed](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#values) to bottom. You can easily customize the direction with `mask-dir` utility, including arbitary values.
+By default, the gradient is [directed](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#values) to bottom. You can easily customize the direction with `mask-dir` utility, including arbitrary values.
 
 ```html
 <div class="mask-linear mask-dir-to-t" />
@@ -61,7 +61,7 @@ The `stops` API is similar to tailwind's [Gradient Color Stops](https://tailwind
 
 **But!** An important difference is that here you should use not `colors` but `opacity` values.
 
-The `opacity` values are taken from your theme specified in the `tailwind.config.js`, but you obviously can use arbitary opacity values as well.
+The `opacity` values are taken from your theme specified in the `tailwind.config.js`, but you obviously can use arbitrary opacity values as well.
 
 ```html
 <div class="mask-linear mask-from-50 mask-to-[0.1]" />
@@ -95,7 +95,7 @@ Applies a `radial-gradient` as the mask image. Like for the `mask-linear` util, 
 
 #### Position `mask-at`
 
-By default, the gradient's position is `center`. You can use the same values as for the [`background-position` css prop](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position#syntax) (`top`, `bottom left` etc), as well as arbitary values with explicit position.
+By default, the gradient's position is `center`. You can use the same values as for the [`background-position` css prop](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position#syntax) (`top`, `bottom left` etc), as well as arbitrary values with explicit position.
 
 ```html
 <div class="mask-radial mask-at-[30px_40px]" />
@@ -118,13 +118,13 @@ Besides *as-they-are* keyword-values, there are also a couple of aliases:
 - `mask-size-contain` for `closest-side`
 - `mask-size-cover` for `farthest-corner`
 
-You can also use arbitary values:
+You can also use arbitrary values:
 
 ```html
 <div class="mask-size-[40%_2rem] mask-radial" />
 <div class="mask-size-[40%_150%] mask-radial" />
 ```
-![example for mask-size with arbitary values](examples/mask-size-arbitary.png)
+![example for mask-size with arbitrary values](examples/mask-size-arbitrary.png)
 
 #### Stops
 
@@ -148,16 +148,16 @@ This value matches `mask-image` css prop's default value so it makes no sense to
 ![mask-none example](examples/mask-none.png)
 
 
-### Arbitary values
+### Arbitrary values
 
 #### Images
 
-The `mask-image` css prop accepts not only gradients but images as well. You can use arbitary values, for example, to apply `url()` as the mask image.
+The `mask-image` css prop accepts not only gradients but images as well. You can use arbitrary values, for example, to apply `url()` as the mask image.
 
 ```html
 <div class="mask-[url('/your-pretty-image.png')]" />
 ```
-![arbitary mask image example](examples/arbitary-image.png)
+![arbitrary mask image example](examples/arbitrary-image.png)
 
 In this case you can manage the [`mask-repeat` css property](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat) as well with the `mask-repeat` and `mask-no-repeat` utils.
 
@@ -173,7 +173,7 @@ You can pass other types of the gradients, e.g. `conic-gradient` etc.
 ```html
 <div class="mask-[conic-gradient(from_45deg,_black,_transparent)]" />
 ```
-![arbitary conic-gradient mask example](examples/arbitary-conic-gradient.png)
+![arbitrary conic-gradient mask example](examples/arbitrary-conic-gradient.png)
 
 Also, you may want not to use the API above even for `linear-gradient` or `radial-gradient` so you can pass them arbitrarily too.
 
