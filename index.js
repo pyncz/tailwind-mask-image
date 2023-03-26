@@ -22,9 +22,11 @@ module.exports = plugin(({ theme, addUtilities, matchUtilities }) => {
 
         // stops
         '--tw-mask-from-opacity': '1',
-        '--tw-mask-from': 'rgba(0,0,0,var(--tw-mask-from-opacity))',
+        '--tw-mask-point-from': '',
+        '--tw-mask-from': 'rgba(0,0,0,var(--tw-mask-from-opacity)) var(--tw-mask-point-from)',
         '--tw-mask-to-opacity': '0',
-        '--tw-mask-to': 'rgba(0,0,0,var(--tw-mask-to-opacity))',
+        '--tw-mask-point-to': '',
+        '--tw-mask-to': 'rgba(0,0,0,var(--tw-mask-to-opacity)) var(--tw-mask-point-to)',
         '--tw-mask-stops': 'var(--tw-mask-from), var(--tw-mask-to)',
       }),
     },
@@ -124,7 +126,7 @@ module.exports = plugin(({ theme, addUtilities, matchUtilities }) => {
     }
   )
 
-  // - stops
+  // - stops' colors
   // NOTE: Can accept custom opacity as an arbitrary value, e.g. `mask-dir-[0.25]`
   matchUtilities(
     {
@@ -135,9 +137,23 @@ module.exports = plugin(({ theme, addUtilities, matchUtilities }) => {
         '--tw-mask-to-opacity': value,
       }),
       'mask-via': (value) => ({
-        '--tw-mask-stops': `var(--tw-mask-from), rgba(0,0,0,${value}), var(--tw-mask-to)`,
+        '--tw-mask-point-via': '',
+        '--tw-mask-stops': `var(--tw-mask-from), rgba(0,0,0,${value}) var(--tw-mask-point-via), var(--tw-mask-to)`,
       }),
     },
     { values: theme('opacity') }
   )
+
+  // - stops' points
+  matchUtilities({
+    'mask-point-from': (value) => ({
+      '--tw-mask-point-from': value,
+    }),
+    'mask-point-to': (value) => ({
+      '--tw-mask-point-to': value,
+    }),
+    'mask-point-via': (value) => ({
+      '--tw-mask-point-via': value,
+    }),
+  })
 })

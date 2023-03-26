@@ -9,25 +9,28 @@ module.exports = {
         {
           mask: (value) => ({
             maskImage: value,
-
+            maskRepeat: 'var(--tw-mask-repeat)',
+    
             /**
              * Default vars
              */
             '--tw-mask-repeat': 'repeat',
-
+    
             // linear-gradient props
             '--tw-mask-direction': 'to bottom',
-
+    
             // radial-gradient props
             '--tw-mask-shape': '',
             '--tw-mask-size': 'closest-side',
             '--tw-mask-at': 'center',
-
+    
             // stops
             '--tw-mask-from-opacity': '1',
-            '--tw-mask-from': 'rgba(0,0,0,var(--tw-mask-from-opacity))',
+            '--tw-mask-point-from': '',
+            '--tw-mask-from': 'rgba(0,0,0,var(--tw-mask-from-opacity)) var(--tw-mask-point-from)',
             '--tw-mask-to-opacity': '0',
-            '--tw-mask-to': 'rgba(0,0,0,var(--tw-mask-to-opacity))',
+            '--tw-mask-point-to': '',
+            '--tw-mask-to': 'rgba(0,0,0,var(--tw-mask-to-opacity)) var(--tw-mask-point-to)',
             '--tw-mask-stops': 'var(--tw-mask-from), var(--tw-mask-to)',
           }),
         },
@@ -40,7 +43,7 @@ module.exports = {
           },
         }
       )
-
+    
       addUtilities({
         '.mask-repeat': {
           maskRepeat: 'repeat',
@@ -49,7 +52,7 @@ module.exports = {
           maskRepeat: 'no-repeat',
         },
       })
-
+    
       // - direction
       // NOTE: Can accept angle as an arbitrary value, e.g. `mask-dir-[30deg]`
       matchUtilities(
@@ -71,7 +74,7 @@ module.exports = {
           },
         }
       )
-
+    
       // - shape
       addUtilities({
         '.mask-shape-circle': {
@@ -81,7 +84,7 @@ module.exports = {
           '--tw-mask-shape': 'ellipse',
         },
       })
-
+    
       // - size
       // NOTE: Can accept X Y size as an arbitrary value, e.g. `mask-size-[25%_25%]`
       matchUtilities(
@@ -98,12 +101,12 @@ module.exports = {
             'farthest-side': 'farthest-side',
             'farthest-corner': 'farthest-corner',
             // aliases
-            contain: 'closest-side',
-            cover: 'farthest-corner',
+            'contain': 'closest-side',
+            'cover': 'farthest-corner',
           },
-        }
+        },
       )
-
+    
       // - position
       // NOTE: Can accept X Y position as an arbitrary value, e.g. `mask-at-[50%_10px]`
       matchUtilities(
@@ -126,8 +129,8 @@ module.exports = {
           },
         }
       )
-
-      // - stops
+    
+      // - stops' colors
       // NOTE: Can accept custom opacity as an arbitrary value, e.g. `mask-dir-[0.25]`
       matchUtilities(
         {
@@ -138,11 +141,25 @@ module.exports = {
             '--tw-mask-to-opacity': value,
           }),
           'mask-via': (value) => ({
-            '--tw-mask-stops': `var(--tw-mask-from), rgba(0,0,0,${value}), var(--tw-mask-to)`,
+            '--tw-mask-point-via': '',
+            '--tw-mask-stops': `var(--tw-mask-from), rgba(0,0,0,${value}) var(--tw-mask-point-via), var(--tw-mask-to)`,
           }),
         },
         { values: theme('opacity') }
       )
+    
+      // - stops' points
+      matchUtilities({
+        'mask-point-from': (value) => ({
+          '--tw-mask-point-from': value,
+        }),
+        'mask-point-to': (value) => ({
+          '--tw-mask-point-to': value,
+        }),
+        'mask-point-via': (value) => ({
+          '--tw-mask-point-via': value,
+        }),
+      })
     },
 
     // helper

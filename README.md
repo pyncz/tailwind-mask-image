@@ -2,7 +2,7 @@
 
 A `mask-image` plugin for [Tailwind CSS](https://tailwindcss.com).
 
-[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/5nqePqTxTt)
+[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/LF91xWKHl7)
 
 ---
 
@@ -73,6 +73,17 @@ The `opacity` values are taken from your theme specified in the `tailwind.config
 > **Note**
 > You don't have to specify **all** the stops, because the default values (100% for the start and 0% for the end point) still work.
 
+##### Stops positions
+
+In addition to setting the opacity of the stops, you can also set the **position** using `mask-point`.
+
+```html
+<div class="mask-linear mask-point-from-[10%] mask-via-10 mask-point-via-[30%] mask-to-100" />
+<div class="mask-linear mask-dir-to-r mask-to-[0.05] mask-point-to-[50%]" />
+```
+![stops' points example](examples/mask-linear-stops-points.png)
+
+This utility don't accept any default value, so use arbitrary values.
 
 ### `radial`
 
@@ -129,11 +140,12 @@ You can also use arbitrary values:
 #### Stops
 
 > **Note**
-> The opacity stops are the same as [the ones described for `mask-linear`](#opacity-stops).
+> The opacity stops for `mask-radial` are the same as [the ones described for `mask-linear`](#opacity-stops), including [points API](#stops-positions).
 
 ```html
 <div class="mask-radial mask-from-0 mask-via-[0.25]" />
 <div class="mask-radial mask-from-0 mask-via-[0.75] mask-to-100" />
+<div class="mask-radial mask-from-0 mask-point-from-[2rem] mask-via-[0.75] mask-point-via-[3rem]" />
 ```
 ![mask-radial stops' example](examples/mask-radial-stops.png)
 
