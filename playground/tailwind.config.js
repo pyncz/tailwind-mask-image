@@ -9,19 +9,16 @@ module.exports = {
         {
           mask: (value) => ({
             maskImage: value,
-            maskRepeat: 'var(--tw-mask-repeat)',
     
             /**
              * Default vars
              */
-            '--tw-mask-repeat': 'repeat',
-    
             // linear-gradient props
             '--tw-mask-direction': 'to bottom',
     
             // radial-gradient props
             '--tw-mask-shape': '',
-            '--tw-mask-size': 'closest-side',
+            '--tw-mask-reach': 'closest-side',
             '--tw-mask-at': 'center',
     
             // stops
@@ -39,19 +36,10 @@ module.exports = {
             none: 'none',
             linear: 'linear-gradient(var(--tw-mask-direction), var(--tw-mask-stops))',
             radial:
-              'radial-gradient(var(--tw-mask-shape) var(--tw-mask-size) at var(--tw-mask-at), var(--tw-mask-stops))',
+              'radial-gradient(var(--tw-mask-shape) var(--tw-mask-reach) at var(--tw-mask-at), var(--tw-mask-stops))',
           },
         }
       )
-    
-      addUtilities({
-        '.mask-repeat': {
-          maskRepeat: 'repeat',
-        },
-        '.mask-no-repeat': {
-          maskRepeat: 'no-repeat',
-        },
-      })
     
       // - direction
       // NOTE: Can accept angle as an arbitrary value, e.g. `mask-dir-[30deg]`
@@ -86,11 +74,11 @@ module.exports = {
       })
     
       // - size
-      // NOTE: Can accept X Y size as an arbitrary value, e.g. `mask-size-[25%_25%]`
+      // NOTE: Can accept X Y size as an arbitrary value, e.g. `mask-reach-[25%_25%]`
       matchUtilities(
         {
-          'mask-size': (value) => ({
-            '--tw-mask-size': value,
+          'mask-reach': (value) => ({
+            '--tw-mask-reach': value,
           }),
         },
         {
@@ -160,6 +148,51 @@ module.exports = {
           '--tw-mask-point-via': value,
         }),
       })
+
+      // Additional attributes
+      // repeat
+      addUtilities({
+        '.mask-repeat': {
+          maskRepeat: 'repeat',
+        },
+        '.mask-repeat-x': {
+          maskRepeat: 'repeat-x',
+        },
+        '.mask-repeat-y': {
+          maskRepeat: 'repeat-y',
+        },
+        '.mask-repeat-space': {
+          maskRepeat: 'space',
+        },
+        '.mask-repeat-round': {
+          maskRepeat: 'round',
+        },
+        '.mask-no-repeat': {
+          maskRepeat: 'no-repeat',
+        },
+      })
+      // size
+      matchUtilities(
+        {
+          'mask-size': (value) => ({
+            maskSize: value,
+          }),
+        },
+        {
+          values: theme('backgroundSize')
+        },
+      )
+      // position
+      matchUtilities(
+        {
+          'mask-position': (value) => ({
+            maskPosition: value,
+          }),
+        },
+        {
+          values: theme('backgroundPosition')
+        },
+      )
     },
 
     // helper

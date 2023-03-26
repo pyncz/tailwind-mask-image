@@ -2,11 +2,11 @@
 
 A `mask-image` plugin for [Tailwind CSS](https://tailwindcss.com).
 
-[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/LF91xWKHl7)
+[<img alt="View on Tailwind Play" src="https://img.shields.io/badge/View%20on%20Tailwind%20Play-%2357a7e1.svg?logo=tailwindcss&logoColor=white&style=flat-square" />](https://play.tailwindcss.com/szgRchW420)
 
 ---
 
-## Install
+# Install
 
 Install the package with your preferred package-manager.
 ```
@@ -27,7 +27,9 @@ module.exports = {
 ```
 
 
-## Usage
+# Usage
+
+## mask-image
 
 There are 3 default values the `mask` utility can accept:
 - `linear`
@@ -111,31 +113,31 @@ By default, the gradient's position is `center`. You can use the same values as 
 ```html
 <div class="mask-radial mask-at-[30px_40px]" />
 ```
-![mask-at example](examples/mask-position.png)
+![mask-at example](examples/mask-at.png)
 
-#### Size `mask-size`
+#### Reach `mask-reach`
 
 With this util you can specify the size of the gradient.
 
 ```html
-<div class="mask-radial mask-size-closest-side" />
-<div class="mask-radial mask-size-closest-corner" />
-<div class="mask-radial mask-size-farthest-side" />
-<div class="mask-radial mask-size-farthest-corner" />
+<div class="mask-radial mask-reach-closest-side" />
+<div class="mask-radial mask-reach-closest-corner" />
+<div class="mask-radial mask-reach-farthest-side" />
+<div class="mask-radial mask-reach-farthest-corner" />
 ```
-![mask-size example](examples/mask-size.png)
+![mask-reach example](examples/mask-reach.png)
 
 Besides *as-they-are* keyword-values, there are also a couple of aliases:
-- `mask-size-contain` for `closest-side`
-- `mask-size-cover` for `farthest-corner`
+- `mask-reach-contain` for `closest-side`
+- `mask-reach-cover` for `farthest-corner`
 
 You can also use arbitrary values:
 
 ```html
-<div class="mask-size-[40%_2rem] mask-radial" />
-<div class="mask-size-[40%_150%] mask-radial" />
+<div class="mask-reach-[40%_2rem] mask-radial" />
+<div class="mask-reach-[40%_150%] mask-radial" />
 ```
-![example for mask-size with arbitrary values](examples/mask-size-arbitrary.png)
+![example for mask-reach with arbitrary values](examples/mask-reach-arbitrary.png)
 
 #### Stops
 
@@ -171,13 +173,6 @@ The `mask-image` css prop accepts not only gradients but images as well. You can
 ```
 ![arbitrary mask image example](examples/arbitrary-image.png)
 
-In this case you can manage the [`mask-repeat` css property](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat) as well with the `mask-repeat` and `mask-no-repeat` utils.
-
-```html
-<div class="mask-[url('/your-pretty-image.png')] mask-repeat sm:mask-no-repeat" />
-```
-![mask-repeat example](examples/mask-repeat.png)
-
 #### Gradients
 
 You can pass other types of the gradients, e.g. `conic-gradient` etc.
@@ -192,3 +187,40 @@ Also, you may want not to use the API above even for `linear-gradient` or `radia
 ```html
 <div class="mask-[linear-gradient(12deg,_black,_transparent)]" />
 ```
+
+
+## mask-size
+
+```html
+<div class="mask-[url('/your-pretty-image.png')] mask-size-cover" />
+<div class="mask-[url('/your-pretty-image.png')] mask-size-contain" />
+<div class="mask-[url('/your-pretty-image.png')] mask-size-[4rem]" />
+```
+![mask size example](examples/mask-size.png)
+
+
+## mask-position
+
+```html
+<div class="mask-[url('/your-pretty-image.png')] mask-no-repeat  mask-position-left-bottom" />
+<div class="mask-[url('/your-pretty-image.png')] mask-no-repeat mask-position-center" />
+<div class="mask-[url('/your-pretty-image.png')] mask-no-repeat mask-position-[0.5rem_25%]" />
+```
+![mask position example](examples/mask-position.png)
+
+
+## mask-repeat
+
+You can manage the [`mask-repeat` css property](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat) as well with the following utilities:
+- `mask-repeat`
+- `mask-repeat-x`
+- `mask-repeat-y`
+- `mask-repeat-space`
+- `mask-repeat-round`
+- `mask-no-repeat`
+
+```html
+<div class="mask-[url('/your-pretty-image.png')] mask-repeat" />
+<div class="mask-[url('/your-pretty-image.png')] mask-no-repeat" />
+```
+![mask-repeat example](examples/mask-repeat.png)
