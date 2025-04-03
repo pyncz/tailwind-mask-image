@@ -1,3 +1,10 @@
+> [!WARNING]
+> **🚧 Deprecated**
+>
+> `tailwindcss` added support for mask utils starting from v4.1! Feel free to use this plugin with earlier versions (tested with v3.x), but tbh, migration to v4.1 is the way to go.
+>
+> [See docs](https://tailwindcss.com/docs/mask-image) ⋅ [See blog post](https://tailwindcss.com/blog/tailwindcss-v4-1#mask-elements-with-the-mask-utilities)
+
 # @pyncz/tailwind-mask-image
 
 A `mask-image` plugin for [Tailwind CSS](https://tailwindcss.com).
